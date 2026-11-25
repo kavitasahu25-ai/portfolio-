@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- Viewport settings for responsive layout across mobile, tablet, and desktop -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kavita Sahu — Visual Storytelling &amp; Design | CCL · IIT Gandhinagar</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Editorial Display Serif (Fraunces) + Clean Sans-Serif (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    // Configure warm beige (#F5F0E6 / #FAF7F2) and deep forest green (#183A2A) palette
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Fraunces"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          colors: {
+            canvas: '#F5F0E6',
+            surface: '#FAF7F2',
+            forest: '#183A2A',
+            forestDeep: '#112A1E',
+            sageMuted: '#4A5D52',
+            hairline: '#DCD3C3'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base editorial typography and color tokens */
+    body {
+      background-color: #F5F0E6;
+      color: #183A2A;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    .font-display {
+      font-family: 'Fraunces', Georgia, serif;
+      font-variation-settings: 'SOFT' 50, 'WONK' 0;
+    }
+
+    /* Offset anchor scroll targets beneath the sticky header */
+    section[id], footer[id] {
+      scroll-margin-top: 5.5rem;
+    }
+
+    /* Subtle lift on interactive cards */
+    .editorial-card {
+      transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), border-color 280ms ease;
+    }
+    .editorial-card:hover {
+      transform: translateY(-3px);
+      border-color: #183A2A;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-forest selection:text-surface">
+
+  <!-- Sticky Minimal Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-canvas/90 backdrop-blur-md border-b border-hairline">
+    <div class="max-w-5xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display text-2xl sm:text-[26px] tracking-tight text-forest">
+        Kavita Sahu
+      </a>
+
+      <nav aria-label="Primary" class="flex items-center gap-5 sm:gap-9 text-xs sm:text-sm font-medium text-sageMuted">
+        <a href="#work" class="hover:text-forest transition-colors py-2">Work</a>
+        <a href="#role" class="hover:text-forest transition-colors py-2">Role</a>
+        <a href="#thoughts" class="hover:text-forest transition-colors py-2">Thoughts</a>
+        <a href="#contact" class="hover:text-forest transition-colors py-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-5xl mx-auto px-6 sm:px-10">
+
+    <!-- Hero Introduction Section -->
+    <section class="py-20 sm:py-28 border-b border-hairline">
+      <div class="max-w-3xl space-y-7">
+        <p class="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] text-sageMuted">
+          <span class="h-1.5 w-1.5 rounded-full bg-forest"></span>
+          CCL Application · IIT Gandhinagar
+        </p>
+
+        <h1 class="font-display text-4xl sm:text-6xl md:text-[64px] text-forest leading-[1.06] tracking-tight">
+          Kavita Sahu — shaping real moments through <span class="italic font-normal">visual clarity,</span> rhythm, and hands-on care.
+        </h1>
+
+        <p class="text-base sm:text-lg leading-relaxed text-sageMuted max-w-2xl">
+          Applicant to the Center for Creative Learning (CCL), IIT Gandhinagar. Social Media Lead and former Discipline Coordinator at NavGurukul Raigarh—bringing practical visual storytelling, clean layout instincts, and steady campus coordination to hands-on learning.
+        </p>
+
+        <div class="pt-2 flex flex-wrap items-center gap-3.5">
+          <a
+            href="#work"
+            class="inline-flex items-center justify-center rounded-full bg-forest hover:bg-forestDeep text-surface text-sm font-medium px-6 py-3 transition-colors"
+          >
+            View Video Work
+          </a>
+          <a
+            href="#thoughts"
+            class="inline-flex items-center justify-center rounded-full border border-forest/30 bg-surface hover:border-forest text-forest text-sm font-medium px-6 py-3 transition-colors"
+          >
+            Read My Note
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section (#work): Two Side-by-Side 4:5 Garba Video Showcase Cards -->
+    <section id="work" class="py-20 sm:py-24 border-b border-hairline space-y-12">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div class="space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] font-medium text-sageMuted">
+            Work
+          </p>
+          <h2 class="font-display text-3xl sm:text-5xl text-forest leading-tight">
+            Campus Garba Reels
+          </h2>
+        </div>
+        <span class="text-xs sm:text-sm font-medium text-sageMuted">
+          NavGurukul Raigarh Campus
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- Video Card 1 -->
+        <article class="editorial-card bg-surface border border-hairline rounded-3xl p-5 sm:p-7 flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.14em] text-sageMuted">
+              <span>01 · Visual Rhythm &amp; Framing</span>
+              <span>4:5 Showcase</span>
+            </div>
+
+            <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-forestDeep border border-forest/20">
+              <iframe
+                src="https://drive.google.com/file/d/1zSmqQ06kxfC5wDfFmuwdtAiIHbfwsFi8/preview"
+                title="Garba Video 01 — NavGurukul Raigarh"
+                class="w-full h-full border-0"
+                allow="autoplay; fullscreen"
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="font-display text-2xl sm:text-[28px] text-forest leading-snug">
+                Garba Celebration Reel I
+              </h3>
+              <p class="text-sm leading-relaxed text-sageMuted">
+                Capturing group energy, movement, and evening lighting with steady framing and clean short-form pacing.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+            <span class="text-xs text-sageMuted">Google Drive Reel</span>
+            <a
+              href="https://drive.google.com/file/d/1zSmqQ06kxfC5wDfFmuwdtAiIHbfwsFi8/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="shrink-0 inline-flex items-center rounded-full border border-hairline bg-canvas hover:border-forest text-forest text-xs font-medium px-3.5 py-1.5 transition-colors"
+            >
+              Open in Google Drive ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Video Card 2 -->
+        <article class="editorial-card bg-surface border border-hairline rounded-3xl p-5 sm:p-7 flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.14em] text-sageMuted">
+              <span>02 · Pacing &amp; Story Flow</span>
+              <span>4:5 Showcase</span>
+            </div>
+
+            <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-forestDeep border border-forest/20">
+              <iframe
+                src="https://drive.google.com/file/d/1DzBps50VQ4kmthYw09joA3F9BLzzsOS6/preview"
+                title="Garba Video 02 — NavGurukul Raigarh"
+                class="w-full h-full border-0"
+                allow="autoplay; fullscreen"
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="font-display text-2xl sm:text-[28px] text-forest leading-snug">
+                Garba Celebration Reel II
+              </h3>
+              <p class="text-sm leading-relaxed text-sageMuted">
+                Balancing wide campus shots with expressive moments and tight cuts to keep the story engaging from start to finish.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-hairline flex items-center justify-between gap-3">
+            <span class="text-xs text-sageMuted">Google Drive Reel</span>
+            <a
+              href="https://drive.google.com/file/d/1DzBps50VQ4kmthYw09joA3F9BLzzsOS6/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="shrink-0 inline-flex items-center rounded-full border border-hairline bg-canvas hover:border-forest text-forest text-xs font-medium px-3.5 py-1.5 transition-colors"
+            >
+              Open in Google Drive ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Role Section (#role): Social Media Lead & Discipline Coordinator -->
+    <section id="role" class="py-20 sm:py-24 border-b border-hairline space-y-12">
+      <div class="space-y-2">
+        <p class="text-[11px] uppercase tracking-[0.18em] font-medium text-sageMuted">
+          Role
+        </p>
+        <h2 class="font-display text-3xl sm:text-5xl text-forest leading-tight">
+          Experience at NavGurukul Raigarh
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <!-- Social Media Lead / Content Creation -->
+        <article class="editorial-card bg-surface border border-hairline rounded-3xl p-7 sm:p-9 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-[11px] uppercase tracking-[0.16em] font-medium text-sageMuted">
+                Visual Storytelling &amp; Design
+              </span>
+              <span class="rounded-full bg-canvas border border-hairline px-3 py-1 text-[11px] font-medium text-forest">
+                Social Media Lead
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl text-forest">
+              Social Media Lead &amp; Content Creator
+            </h3>
+
+            <p class="text-sm sm:text-[15px] leading-relaxed text-sageMuted">
+              Planning, filming, editing, and presenting campus reels and visual posts for NavGurukul Raigarh—focusing on clear framing, readable visual hierarchy, and authentic student stories.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-hairline flex flex-wrap gap-2 text-xs text-forest">
+            <span class="rounded-full bg-canvas border border-hairline px-3 py-1">Short-Form Video</span>
+            <span class="rounded-full bg-canvas border border-hairline px-3 py-1">Visual Framing</span>
+            <span class="rounded-full bg-canvas border border-hairline px-3 py-1">Content Design</span>
+          </div>
+        </article>
+
+        <!-- Discipline Coordinator -->
+        <article class="editorial-card bg-surface border border-hairline rounded-3xl p-7 sm:p-9 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-[11px] uppercase tracking-[0.16em] font-medium text-sageMuted">
+                Coordination &amp; Operations
+              </span>
+              <span class="rounded-full bg-canvas border border-hairline px-3 py-1 text-[11px] font-medium text-sageMuted">
+                Leadership
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl text-forest">
+              Discipline Coordinator
+            </h3>
+
+            <p class="text-sm sm:text-[15px] leading-relaxed text-sageMuted">
+              Coordinating daily schedules, campus events, and student groups with calm structure and follow-through—helping teams stay organized, reliable, and on track during busy activities.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-hairline flex flex-wrap gap-2 text-xs text-forest">
+            <span class="rounded-full bg-canvas border border-hairline px-3 py-1">Schedule Coordination</span>
+            <span class="rounded-full bg-canvas border border-hairline px-3 py-1">Team Reliability</span>
+            <span class="rounded-full bg-canvas border border-hairline px-3 py-1">Event Execution</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Thoughts Section (#thoughts): Personal Note for CCL -->
+    <section id="thoughts" class="py-20 sm:py-24">
+      <div class="bg-surface border border-hairline rounded-3xl p-8 sm:p-12 md:p-16">
+        <div class="max-w-2xl mx-auto space-y-6">
+          <div class="space-y-2 border-b border-hairline pb-6">
+            <p class="text-[11px] uppercase tracking-[0.18em] font-medium text-sageMuted">
+              Thoughts
+            </p>
+            <h2 class="font-display text-3xl sm:text-5xl text-forest leading-tight">
+              Creative Learning &amp; Visual Clarity
+            </h2>
+          </div>
+
+          <div class="space-y-5 text-base sm:text-[17px] leading-[1.8] text-forest/90">
+            <p>
+              Creative learning begins when an idea feels approachable rather than intimidating. Whether filming a lively campus moment or arranging visuals on a page, visual clarity helps people notice details, connect patterns, and stay curious.
+            </p>
+            <p>
+              Hands-on making teaches things that reading alone often misses—how light falls, how a sequence flows, and how small adjustments change the whole experience. At CCL, IIT Gandhinagar, I hope to contribute practical visual energy and organized teamwork while learning deeply from making alongside creative minds.
+            </p>
+          </div>
+
+          <div class="pt-4 flex items-center justify-between text-xs text-sageMuted border-t border-hairline">
+            <span class="font-display text-lg italic text-forest">— Kavita Sahu</span>
+            <span>NavGurukul Raigarh</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contact Section (#contact): Deep Forest Green Card -->
+  <footer id="contact" class="max-w-5xl mx-auto px-6 sm:px-10 pb-12 sm:pb-16">
+    <div class="bg-forest text-surface rounded-3xl p-8 sm:p-12 md:p-14 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div class="space-y-3 max-w-lg">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-surface/65 font-medium">
+            Contact
+          </p>
+          <h2 class="font-display text-3xl sm:text-5xl text-surface leading-tight">
+            Get in Touch
+          </h2>
+          <p class="text-sm sm:text-base text-surface/80 leading-relaxed">
+            Application portfolio for Center for Creative Learning (CCL), IIT Gandhinagar.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="mailto:kavitasahu25@navgurukul.org"
+            class="inline-flex items-center justify-center rounded-full bg-surface hover:bg-canvas text-forest text-sm font-medium px-6 py-3 transition-colors"
+          >
+            Email Kavita
+          </a>
+          <button
+            id="copy-email-btn"
+            type="button"
+            class="inline-flex items-center justify-center rounded-full border border-surface/35 hover:border-surface text-surface text-sm font-medium px-6 py-3 transition-colors cursor-pointer"
+          >
+            Copy Email
+          </button>
+          <span id="copy-feedback" class="text-xs text-surface/85 min-h-[1rem]" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-surface/15 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs sm:text-sm text-surface/80">
+        <a
+          id="kavita-email"
+          href="mailto:kavitasahu25@navgurukul.org"
+          class="hover:text-surface underline decoration-surface/35 underline-offset-4 transition-colors"
+        >
+          kavitasahu25@navgurukul.org
+        </a>
+        <span class="text-surface/65 text-xs">
+          Kavita Sahu · CCL, IIT Gandhinagar
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Copy kavitasahu25@navgurukul.org with instant visual feedback
+      const copyBtn = document.getElementById('copy-email-btn');
+      const emailEl = document.getElementById('kavita-email');
+      const feedbackEl = document.getElementById('copy-feedback');
+
+      if (!copyBtn || !emailEl) return;
+
+      copyBtn.addEventListener('click', function () {
+        const emailAddress = (emailEl.textContent || 'kavitasahu25@navgurukul.org').trim();
+        let copied = false;
+
+        try {
+          const tempInput = document.createElement('textarea');
+          tempInput.value = emailAddress;
+          tempInput.setAttribute('readonly', '');
+          tempInput.style.position = 'fixed';
+          tempInput.style.opacity = '0';
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          copied = document.execCommand('copy');
+          document.body.removeChild(tempInput);
+        } catch (e) {
+          copied = false;
+        }
+
+        if (feedbackEl) {
+          feedbackEl.textContent = copied
+            ? 'Copied: ' + emailAddress
+            : emailAddress;
+          window.clearTimeout(copyBtn._feedbackTimer);
+          copyBtn._feedbackTimer = window.setTimeout(function () {
+            feedbackEl.textContent = '';
+          }, 3000);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
